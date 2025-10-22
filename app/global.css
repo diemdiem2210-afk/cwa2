@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 255, 255, 255;
+  --background-end-rgb: 240, 240, 240;
+  
+  /* Button and UI variables for light mode */
+  --button-bg: #2563eb;
+  --button-hover: #1d4ed8;
+  --button-text: #ffffff;
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --header-bg: #f8fafc;
+  --border-color: #e2e8f0;
+  --warning-color: #fef3cd;
+}
+
+.dark {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 20, 20, 20;
+  
+  /* Button and UI variables for dark mode - lighter buttons */
+  --button-bg: #60a5fa;
+  --button-hover: #3b82f6;
+  --button-text: #1f2937;
+  --bg-color: #1f2937;
+  --text-color: #ffffff;
+  --header-bg: #374151;
+  --border-color: #4b5563;
+  --warning-color: #fbbf24;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  transition: color 0.3s ease, background 0.3s ease;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
